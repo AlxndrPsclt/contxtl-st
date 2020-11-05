@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Cousine for Powerline:pixelsize=22:antialias=true:autohint=true";
+static char *font = "Iosevka:size=20:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
