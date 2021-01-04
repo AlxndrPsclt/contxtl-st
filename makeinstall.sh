@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 make clean
-rm config.h
+rm -f config.h
 make
 sudo make install
