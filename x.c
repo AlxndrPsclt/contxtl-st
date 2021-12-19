@@ -719,8 +719,8 @@ cresize(int width, int height)
 	if (height != 0)
 		win.h = height;
 
-	col = (win.w - 2 * borderpx) / win.cw;
-	row = (win.h - 2 * borderpx) / win.ch;
+	col = (win.w - 2 * borderpxH) / win.cw;
+	row = (win.h - 2 * borderpxV) / win.ch;
 	col = MAX(1, col);
 	row = MAX(1, row);
 
@@ -846,10 +846,10 @@ xhints(void)
 	sizeh->width = win.w;
 	sizeh->height_inc = 1;
 	sizeh->width_inc = 1;
-	sizeh->base_height = 2 * borderpx;
-	sizeh->base_width = 2 * borderpx;
-	sizeh->min_height = win.ch + 2 * borderpx;
-	sizeh->min_width = win.cw + 2 * borderpx;
+	sizeh->base_height = 2 * borderpxV;
+	sizeh->base_width = 2 * borderpxH;
+	sizeh->min_height = win.ch + 2 * borderpxV;
+	sizeh->min_width = win.cw + 2 * borderpxH;
 	if (xw.isfixed) {
 		sizeh->flags |= PMaxSize;
 		sizeh->min_width = sizeh->max_width = win.w;
@@ -1666,8 +1666,8 @@ xximspot(int x, int y)
 	if (xw.ime.xic == NULL)
 		return;
 
-	xw.ime.spot.x = borderpx + x * win.cw;
-	xw.ime.spot.y = borderpx + (y + 1) * win.ch;
+	xw.ime.spot.x = borderpxH + x * win.cw;
+	xw.ime.spot.y = borderpxV + (y + 1) * win.ch;
 
 	XSetICValues(xw.ime.xic, XNPreeditAttributes, xw.ime.spotlist, NULL);
 }

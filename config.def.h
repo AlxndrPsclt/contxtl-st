@@ -5,8 +5,10 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Iosevka:size=13:antialias=true:autohint=true";
-static int borderpx = 2;
+static char *font = "Iosevka:size=12:antialias=true:autohint=true";
+static int borderpx = 100;
+static int borderpxH = 50;
+static int borderpxV = 30;
 
 /*
  * What program is execed by st depends of these precedence rules:

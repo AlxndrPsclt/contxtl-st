@@ -2,4 +2,4 @@
 make clean
 rm -f config.h
 make
-sudo make install
+#sudo make install
